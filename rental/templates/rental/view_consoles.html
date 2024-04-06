@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consoles</title>
+  </head>
+  <body>
+    <h1>Available Consoles</h1>
+    <ul>
+      {% for console in available_consoles%}
+
+      <li>{{console.name}}</li>
+      {%empty %}
+      <li>No consoles Available now</li>
+      {%endfor%}
+    </ul>
+    <h1>Rented Consoles</h1>
+    <ul>
+      {% for console in rented_consoles%}
+
+      <li>{{console.name}}</li>
+      {%empty %}
+      <li>No consoles Rented now</li>
+      {%endfor%}
+    </ul>
+  </body>
+</html>

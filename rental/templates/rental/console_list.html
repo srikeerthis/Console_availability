@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Console Rentals</title>
+  </head>
+  <body>
+    <h2>Consoles List</h2>
+    <ul>
+      {%for console in consoles%}
+      <li>
+        {{console.name}} - {%if console.is_rented %} Rented {%else %} Available
+        {%endif%}
+        <a href="{%url 'toggle_rental_status' console.id%}">Toggle Status</a>
+      </li>
+      {%endfor%}
+    </ul>
+    <a href="{%url 'add_console'%}">Add New Console</a>
+  </body>
+</html>
